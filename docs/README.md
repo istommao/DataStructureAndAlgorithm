@@ -2,7 +2,7 @@
 
 https://github.com/istommao/DataStructureAndAlgorithm
 
-* [介绍](README.md)
+* [简介 (Intro)](README.md)
 * [字符串 (String)](string/index.md)
     * [KMP算法](string/kmp.md)
     * [Boyer-Moore算法](string/bm.md)
