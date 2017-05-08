@@ -27,3 +27,14 @@
 | -- | -- | -- |
 | 总节点k |  $$ 2^{h - 1} $$ <= k <= $$ 2^h - 1 $$  |  k = $$ 2^h - 1 $$ |
 | 树高h  | h = $$ \log_2{k} + 1 $$  |  h = $$ \log_2{k + 1} $$ |
+
+## 实现
+
+```python
+class Node(object):
+    def __init__(self, left=None, right=None, value):
+        self.left = left
+        self.right = right
+        self.value = value
+
+```

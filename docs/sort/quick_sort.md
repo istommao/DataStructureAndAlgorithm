@@ -14,14 +14,21 @@
 - 重新排序数列，所有比基准值小的元素摆放在基准前面，所有比基准值大的元素摆在基准后面（相同的数可以到任一边）。在这个分区结束之后，该基准就处于数列的中间位置。这个称为分区（partition）操作。
 - 递归地（recursively）把小于基准值元素的子数列和大于基准值元素的子数列排序。
 
+
+![](./_image/Sorting_quicksort_anim.gif)
+
+
 ## 实现
 
 ### 递归实现
 
 ```python
 def qsort(lst):
-    if len(lst) <= 1:
+    if not lst:
         return lst
-
-    return qsort([x for x in lst[1:] if x < lst[0]]) + [lst[0]] + qsort([x for x in lst[1:] if x >= lst[0]])
+    
+    pivot = lst[0]
+    less = [x for x in lst if x < pivot]
+    more = [x for x in lst[1:] if x >= pivot]
+    return qsort(less) + [pivot] + qsort(more)
 ```
