@@ -16,6 +16,9 @@ https://github.com/istommao/DataStructureAndAlgorithm
 ## 树 (Tree)
 
 - 二叉树 (Binary Tree)
+- AVL树 (AVL Tree)
+- 红黑树 (Red-black Tree)
+
 
 ## 图 (Graph)
 
