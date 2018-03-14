@@ -1,3 +1,43 @@
 {
-    "plugins": ["katex"]
+    "title": "DataStructure And Algorithm Notes",
+    "description": "数据结构与算法,无声笔记",
+    "language": "zh-hans",
+    "plugins": [
+        "katex",
+        "github",
+        "prism",
+        "sitemap",
+        "expandable-chapters",
+        "page-toc-button",
+        "back-to-top-button",
+        "-sharing",
+        "sharing-plus"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": true,
+            "qq": true,
+            "douban": true,
+            "pocket": true,
+            "vk": false,
+            "all": [
+                "weibo", "pocket", "qq"
+            ]
+        },
+        "github": {
+          "url": "https://github.com/istommao/DataStructureAndAlgorithm"
+        },
+        "sitemap": {
+            "hostname": "https://da.silentnotes.top/"
+        },
+        "prism": {
+            "css": [
+              "prismjs/themes/prism-okaidia.css"
+            ]
+        },
+        "expandable-chapters":{}
+    }
 }
