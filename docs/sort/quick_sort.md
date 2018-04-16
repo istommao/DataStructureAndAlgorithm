@@ -26,7 +26,7 @@
 def qsort(lst):
     if not lst:
         return lst
-    
+
     pivot = lst[0]
     less = [x for x in lst if x < pivot]
     more = [x for x in lst[1:] if x >= pivot]

@@ -5,6 +5,7 @@
     * [KMP算法](string/kmp.md)
     * [Boyer-Moore算法](string/bm.md)
 * [堆栈 (Stack)](stack.md)
+    * [Python实现](stack/python.md)
 * [队列 (Queue)](queue.md)
 * [链表 (Linked List)](linked_list.md)
 * [树 (Tree)](tree/index.md)
