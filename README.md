@@ -22,6 +22,14 @@ https://github.com/istommao/DataStructureAndAlgorithm
 
 ## 图 (Graph)
 
+- 哈夫曼编码
+- 树的遍历
+- 最短路径算法
+- 最小生成树算法
+- 最小树形图
+- 网络流算法
+- 匹配算法
+
 ## 堆 (Heap)
 
 ## 散列表 (Hash)
@@ -29,4 +37,12 @@ https://github.com/istommao/DataStructureAndAlgorithm
 ## 排序算法 (Sort)
 
 - 插入排序
+- 冒泡排序
 - 快速排序
+
+
+## 搜索算法
+- DFS 深度优先搜索
+- BFS 广度优先搜索
+- 启发式搜索
+- 遗传算法

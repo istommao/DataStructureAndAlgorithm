@@ -32,3 +32,26 @@ def qsort(lst):
     more = [x for x in lst[1:] if x >= pivot]
     return qsort(less) + [pivot] + qsort(more)
 ```
+
+```python
+def qsort(a, start, end):
+
+    def partition(lst, start, end):
+        x = lst[end]
+        i = start - 1
+        for j in range(start, end):
+            if lst[j] <= x:
+                i += 1
+                lst[i], lst[j] = lst[j], lst[i]
+        lst[i + 1], lst[end] = lst[end], lst[i + 1]
+        return i + 1
+
+    if start < end:
+        middle = partition(a, start, end)
+        qsort(a, start, middle - 1)
+        qsort(a, middle + 1, end)
+    return a
+
+data = [234, 21, 56, 45, 79, 3]
+lst = qsort(data, 0, len(data) - 1)
+```
