@@ -5,90 +5,137 @@
 - 后序遍历: 左子树 -> 右子树 -> 根节点
 - 层次遍历
 
+## 前序遍历
+
 ```python
 class Node(object):
 
-    def __init__(self, val=-1, left=None, right=None):
-        self.val = val
+    def __init__(self, val=None, left=None, right=None):
         self.left = left
         self.right = right
-
+        self.val = val
 
 class Tree(object):
 
-    def __init__(self):
-        self.root = Node()
-        self.storage = []
+    def __init__(self, root):
+        self.root = root
 
-    def add(self, val):
-        node = Node(val)
-        if self.root.val == -1:
-            self.root = node
-            self.storage.append(self.root)
-        else:
-            treeNode = self.storage[0]
-            if not treeNode.left:
-                treeNode.left = node
-                self.storage.append(treeNode.left)
-            else:
-                treeNode.right = node
-                self.storage.append(treeNode.right)
-                self.storage.pop(0)
-
-    def front_recursive(self, root):
-        if not root:
-            return
-        print(root.val)
-        self.front_recursive(root.left)
-        self.front_recursive(root.right)
-
-    def middle_recursive(self, root):
-        if not root:
-            return
-        self.middle_recursive(root.left)
-        print(root.val)
-        self.middle_recursive(root.right)
-
-    def later_recursive(self, root):
-        if not root:
-            return
-        self.later_recursive(root.left)
-        self.later_recursive(root.right)
-        print(root.val)
-
-    def front_stack(self, root):
-        if not root:
-            return
+    def stack_print(self, root):
+        """堆栈实现"""
         stack = []
-        node = root
-        while node or stack:
-            while node:
-                print(node.val)
-                stack.append(node)
-                node = node.left
-            node = stack.pop()
-            node = node.right
 
-    def middle_stack(self, root):
+        while root or stack:
+            while root:
+                stack.append(root)
+                print(root.val)
+                root = root.left
+
+            if stack:
+                root = stack.pop()
+                root = root.right
+
+    def recursive_print(self, root):
+        """递归实现"""
         if not root:
             return
-        stack = []
-        node = root
-        while node or stack:
-            while node:
-                stack.append(node)
-                node = node.left
-            node = stack.pop()
-            print(node.val)
-            node = node.right
 
-    def later_stack(self, root):
+        print(root.val)
+        self.recursive_print(root.left)
+        self.recursive_print(root.right)
+
+def main():
+    left = Node(2, left=Node(4), right=Node(5))
+
+    right = Node(3, left=Node(6), right=Node(7))
+
+    root = Node(1, left=left, right=right)
+
+    tree = Tree(root)
+
+    print('递归 先序遍历:')
+    tree.recursive_print(tree.root)
+    print('堆栈 先序遍历:')
+    tree.stack_print(tree.root)
+```
+
+## 中序遍历
+
+
+```python
+class Node(object):
+
+    def __init__(self, val=None, left=None, right=None):
+        self.left = left
+        self.right = right
+        self.val = val
+
+class Tree(object):
+
+    def __init__(self, root):
+        self.root = root
+
+    def stack_print(self, root):
+        """堆栈实现"""
+        stack = []
+
+        while root or stack:
+            while root:
+                stack.append(root)
+                root = root.left
+
+            if stack:
+                root = stack.pop()
+                print(root.val)
+                root = root.right
+
+    def recursive_print(self, root):
+        """递归实现"""
+        if not root:
+            return
+
+        self.recursive_print(root.left)
+        print(root.val)
+        self.recursive_print(root.right)
+
+def main():
+    left = Node(2, left=Node(4), right=Node(5))
+
+    right = Node(3, left=Node(6), right=Node(7))
+
+    root = Node(1, left=left, right=right)
+
+    tree = Tree(root)
+
+    print('递归 中序遍历:')
+    tree.recursive_print(tree.root)
+    print('堆栈 中序遍历:')
+    tree.stack_print(tree.root)
+```
+
+## 后序遍历
+
+```python
+class Node(object):
+
+    def __init__(self, val=None, left=None, right=None):
+        self.left = left
+        self.right = right
+        self.val = val
+
+class Tree(object):
+
+    def __init__(self, root):
+        self.root = root
+
+    def stack_print(self, root):
+        """堆栈实现"""
         if not root:
             return
         stack1 = []
         stack2 = []
         node = root
         stack1.append(node)
+
         while stack1:
             node = stack1.pop()
             if node.left:
@@ -98,6 +145,45 @@ class Tree(object):
             stack2.append(node)
         while stack2:
             print(stack2.pop().val)
+
+    def recursive_print(self, root):
+        """递归实现"""
+        if not root:
+            return
+
+        self.recursive_print(root.left)
+        self.recursive_print(root.right)
+        print(root.val)
+
+def main():
+    left = Node(2, left=Node(4), right=Node(5))
+
+    right = Node(3, left=Node(6), right=Node(7))
+
+    root = Node(1, left=left, right=right)
+
+    tree = Tree(root)
+
+    print('递归 后序遍历:')
+    tree.recursive_print(tree.root)
+    print('堆栈 后序遍历:')
+    tree.stack_print(tree.root)
+```
+
+## 层次遍历
+
+```python
+class Node(object):
+
+    def __init__(self, val=None, left=None, right=None):
+        self.left = left
+        self.right = right
+        self.val = val
+
+class Tree(object):
+
+    def __init__(self, root):
+        self.root = root
 
     def level_queue(self, root):
         if not root:
@@ -113,26 +199,15 @@ class Tree(object):
             if node.right:
                 storage.append(node.right)
 
-def main(data=10):
-    vals = range(data)
-    tree = Tree()
-    for val in vals:
-        tree.add(val)
+def main():
+    left = Node(2, left=Node(4), right=Node(5))
 
-    print('队列实现层次遍历:')
+    right = Node(3, left=Node(6), right=Node(7))
+
+    root = Node(1, left=left, right=right)
+
+    tree = Tree(root)
+
+    print('队列 层次遍历:')
     tree.level_queue(tree.root)
-
-    print('\n\n递归实现先序遍历:')
-    tree.front_recursive(tree.root)
-    print('\n递归实现中序遍历:' )
-    tree.middle_recursive(tree.root)
-    print('\n递归实现后序遍历:')
-    tree.later_recursive(tree.root)
-
-    print('\n\n堆栈实现先序遍历:')
-    tree.front_stack(tree.root)
-    print('\n堆栈实现中序遍历:')
-    tree.middle_stack(tree.root)
-    print('\n堆栈实现后序遍历:')
-    tree.later_stack(tree.root)
 ```
