@@ -47,3 +47,8 @@ https://github.com/istommao/DataStructureAndAlgorithm
 - BFS 广度优先搜索
 - 启发式搜索
 - 遗传算法
+
+## 链接
+
+- https://github.com/TheAlgorithms/Python
+- https://www.nowcoder.com/ta/coding-interviews
