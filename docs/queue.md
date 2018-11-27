@@ -6,31 +6,78 @@
 - 队列只允许在后端(rear)进行插入，在前端(front) 进行删除
 
 
-## Python实现
+## Python实现 循环队列
 
 ```python
+
 class Queue(object):
 
-    def __init__(self, size=8):
-        self._size = size
-        self._vals = [0] * size
-        self._head = 0
-        self._num = 0
+    def __init__(self, size):
+        self.head = -1
+        self.tail = -1
+        self.size = size
+        self._lst = []
 
-    def is_empty(self):
-        returnm self._num == 0
+    def enQueue(self, val):
+        if self.isFull():
+            return False
 
-    def peek(self):
-        return self._vals[self._head]
+        if self.isEmpty():
+            head = 0
 
-    def dequeue(self):
-        val = self._vals[self._head]
-        self._head = (self._head + 1) % self._size
-        self._num -= 1
-        return val
+        self.tail = (self.tail + 1) % self.size
+        self._lst[self.tail] = val
+        return True
 
-    def enqueue(self, val):
-        self._vals.append(val)
+    def deQueue(self):
+        if self.isEmpty():
+            return False
 
-        self._num += 1
+        if (self.head == self.tail):
+            self.head = -1
+            self.tail = -1
+            return True
+
+        self.head = (self.head + 1) % self.size
+        return True
+
+    def front(self):
+        if self.isEmpty():
+            return -1
+
+        return self._lst[self.head]
+
+    def rear(self):
+        if self.isEmpty():
+            return -1
+
+        return self._lst[self.tail]
+
+    def isEmpty(self):
+        return self.head == -1
+
+    def isFull(self):
+        return ((self.tail + 1) % self.size) == self.head
+```
+
+## C语言实现 循环队列
+
+```c
+typedef struct Queue {
+    int head;
+    int tail;
+    int size;
+
+    int enQueue(int value);
+    int deQueue(void);
+    int front(void);
+    int rear(void);
+    int isEmpty(void);
+    int isFull(void);
+} Queue;
+
+int main() {
+
+    return 0;
+}
 ```

@@ -20,8 +20,49 @@
 
 ```
 
+### Python实现
+
+```python
+class LinkedList(object):
+
+    def __init__(self, val):
+        self._next = None
+        self.val = val
+
+    def reverse(self, head):
+        pre = None
+        while head:
+            temp = head._next
+            head._next = prev
+            prev = head
+            head = temp
+        return prev
+
+    def print(self):
+        while self._next:
+            print(self._next.val)
+```
+
 
 ## 双向链表
+
+```python
+class LinkedList(object):
+
+    def __init__(self, val):
+        self.val = val
+        self._prev = self._next = None
+
+    def reverse(self, head):
+        curt = None
+        while head:
+            curt = head
+            head = curt._next
+            curt._next = curt._prev
+            curt._prev = head
+        return curt
+```
+
 
 ## 循环链表
 

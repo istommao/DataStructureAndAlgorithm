@@ -8,14 +8,14 @@
 ## 前序遍历
 
 ```python
-class Node(object):
+class TreeNode(object):
 
     def __init__(self, val=None, left=None, right=None):
         self.left = left
         self.right = right
         self.val = val
 
-class Tree(object):
+class BinTree(object):
 
     def __init__(self, root):
         self.root = root
@@ -44,13 +44,13 @@ class Tree(object):
         self.recursive_print(root.right)
 
 def main():
-    left = Node(2, left=Node(4), right=Node(5))
+    left = TreeNode(2, left=TreeNode(4), right=TreeNode(5))
 
-    right = Node(3, left=Node(6), right=Node(7))
+    right = TreeNode(3, left=TreeNode(6), right=TreeNode(7))
 
-    root = Node(1, left=left, right=right)
+    root = TreeNode(1, left=left, right=right)
 
-    tree = Tree(root)
+    tree = BinTree(root)
 
     print('递归 先序遍历:')
     tree.recursive_print(tree.root)
@@ -62,14 +62,14 @@ def main():
 
 
 ```python
-class Node(object):
+class TreeNode(object):
 
     def __init__(self, val=None, left=None, right=None):
         self.left = left
         self.right = right
         self.val = val
 
-class Tree(object):
+class BinTree(object):
 
     def __init__(self, root):
         self.root = root
@@ -98,13 +98,13 @@ class Tree(object):
         self.recursive_print(root.right)
 
 def main():
-    left = Node(2, left=Node(4), right=Node(5))
+    left = TreeNode(2, left=TreeNode(4), right=TreeNode(5))
 
-    right = Node(3, left=Node(6), right=Node(7))
+    right = TreeNode(3, left=TreeNode(6), right=TreeNode(7))
 
-    root = Node(1, left=left, right=right)
+    root = TreeNode(1, left=left, right=right)
 
-    tree = Tree(root)
+    tree = BinTree(root)
 
     print('递归 中序遍历:')
     tree.recursive_print(tree.root)
@@ -115,14 +115,14 @@ def main():
 ## 后序遍历
 
 ```python
-class Node(object):
+class TreeNode(object):
 
     def __init__(self, val=None, left=None, right=None):
         self.left = left
         self.right = right
         self.val = val
 
-class Tree(object):
+class BinTree(object):
 
     def __init__(self, root):
         self.root = root
@@ -156,13 +156,13 @@ class Tree(object):
         print(root.val)
 
 def main():
-    left = Node(2, left=Node(4), right=Node(5))
+    left = TreeNode(2, left=TreeNode(4), right=TreeNode(5))
 
-    right = Node(3, left=Node(6), right=Node(7))
+    right = TreeNode(3, left=TreeNode(6), right=TreeNode(7))
 
-    root = Node(1, left=left, right=right)
+    root = TreeNode(1, left=left, right=right)
 
-    tree = Tree(root)
+    tree = BinTree(root)
 
     print('递归 后序遍历:')
     tree.recursive_print(tree.root)
@@ -173,14 +173,14 @@ def main():
 ## 层次遍历
 
 ```python
-class Node(object):
+class TreeNode(object):
 
     def __init__(self, val=None, left=None, right=None):
         self.left = left
         self.right = right
         self.val = val
 
-class Tree(object):
+class BinTree(object):
 
     def __init__(self, root):
         self.root = root
@@ -200,13 +200,13 @@ class Tree(object):
                 storage.append(node.right)
 
 def main():
-    left = Node(2, left=Node(4), right=Node(5))
+    left = TreeNode(2, left=TreeNode(4), right=TreeNode(5))
 
-    right = Node(3, left=Node(6), right=Node(7))
+    right = TreeNode(3, left=TreeNode(6), right=TreeNode(7))
 
-    root = Node(1, left=left, right=right)
+    root = TreeNode(1, left=left, right=right)
 
-    tree = Tree(root)
+    tree = BinTree(root)
 
     print('队列 层次遍历:')
     tree.level_queue(tree.root)
