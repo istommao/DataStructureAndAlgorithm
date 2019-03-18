@@ -41,8 +41,11 @@
 ## 排序算法 Sort
 
 - [排序算法 (Sort)](sort/index.md)
+- [选择排序](sort/selection_sort.md)
 - [插入排序](sort/insert_sort.md)
+- [冒泡排序](sort/bubble_sort.md)
 - [希尔排序](sort/shell_sort.md)
 - [归并排序](sort/merge_sort.md)
 - [快速排序](sort/quick_sort.md)
 - [堆排序](sort/heap_sort.md)
+- [桶排序](sort/bucket_sort.md)
