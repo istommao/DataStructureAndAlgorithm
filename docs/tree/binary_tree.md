@@ -38,3 +38,12 @@ class Node(object):
         self.value = value
 
 ```
+
+## 二叉树遍历
+
+- 前序遍历
+- 中序遍历
+- 后序遍历
+- 层级遍历
+
+
