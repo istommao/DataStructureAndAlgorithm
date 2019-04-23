@@ -5,8 +5,11 @@
 ## 第 1 章 栈和队列
 
 - [最小栈](stack_queue/minstack.md)
+- [使用栈实现队列](stack_queue/stack_queue.md)
 
 ## 第 2 章 链表
+
+- [删除链表的倒数第N个节点](linked/remove-nth-node-from-end-of-list.md)
 
 ## 第 3 章 二叉树
 
