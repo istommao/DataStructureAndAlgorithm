@@ -10,7 +10,7 @@
 | 堆排序   | heap      | $$ nlog_2{n} $$  | 1           | 不稳定 |
 | 希尔排序 | Shell     | $$ n^{1.3} $$    | 1           | 不稳定 |
 | 归并排序 | Merge     | $$ nlog_2{n} $$  | 1           | 稳 |
-| 快速排序 | Quick     | $$ nlog_2{n} $$  | $$ nlog_2{n} $$ | 不稳定 |
+| 快速排序 | Quick     | $$ nlog_2{n} $$  | $$ log_2{n} $$ | 不稳定 |
 | 桶排序   | Bucket    | n + k            | n + k       | 稳 |
 | 计数排序 | Counting  | n + k            | n + k       | 稳 |
 | 基数排序 | Radix     | n * k            | n + k       | 稳 |

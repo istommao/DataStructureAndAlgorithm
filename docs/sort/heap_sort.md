@@ -2,11 +2,13 @@
 
 - [堆排序 wiki](https://www.wikiwand.com/zh-hans/%E5%A0%86%E6%8E%92%E5%BA%8F)
 
+## 最小堆排序
+
 ```python
 def heap_sort(lst):
 
     def sift_down(start, end):
-        """最大堆调整"""
+        """最小堆调整"""
         root = start
         while True:
             child = 2 * root + 1
@@ -21,8 +23,7 @@ def heap_sort(lst):
             else:
                 break
 
-    # 创建最大堆
-
+    # 创建最小堆
     for start in range((len(lst) - 2) // 2, -1, -1):
         sift_down(start, len(lst) - 1)
 

@@ -2,11 +2,9 @@
 
 * [简介 (Intro)](README.md)
 
-## 字符串 String
 
-- [字符串 (String)](string/index.md)
-- [KMP算法](string/kmp.md)
-- [Boyer-Moore算法](string/bm.md)
+## 链表 Linked List
+- [链表 (Linked List)](linked_list.md)
 
 ## 栈 Stack
 
@@ -16,9 +14,6 @@
 ## 队列 Queue
 
 - [队列 (Queue)](queue.md)
-
-## 链表 Linked List
-- [链表 (Linked List)](linked_list.md)
 
 ## 树 Tree
 
@@ -37,6 +32,12 @@
 
 * [堆 (Heap)](heap.md)
 * [散列表 (Hash)](hashtable.md)
+
+## 字符串 String
+
+- [字符串 (String)](string/index.md)
+- [KMP算法](string/kmp.md)
+- [Boyer-Moore算法](string/bm.md)
 
 ## 排序算法 Sort
 
