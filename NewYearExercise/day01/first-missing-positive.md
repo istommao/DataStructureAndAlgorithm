@@ -33,7 +33,9 @@ class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         count = len(nums)
         for index in range(count):
+            # 值与下标不相等就继续交换
             while nums[index] != index + 1:
+                # 值在 (0, count) 才有意义
                 if 0 < nums[index] < count and nums[nums[index] - 1] != nums[index]:
                     temp = nums[nums[index] - 1]
                     nums[nums[index] - 1] = nums[index]
@@ -42,7 +44,29 @@ class Solution:
                     break
 
         for index in range(count):
+            # 数值与下标不一致的就是要找的值
             if nums[index] != index + 1:
                 return index + 1
+
+        # 遍历完列表还未找到，说明前面都是有序的
         return count + 1
+```
+
+## 另一种解
+
+- 来自 https://zhangluncong.com/2018/07/11/firstMissingPositive/
+
+```python
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        i, count = 0, 1
+        size = len(nums)
+        while i < size:
+            if count == nums[i]:
+                count += 1
+                i = 0
+            else:
+                i += 1
+
+        return count
 ```

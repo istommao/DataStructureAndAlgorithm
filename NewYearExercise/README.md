@@ -2,7 +2,6 @@
 
 > 极客时间 数据结构与算法之美 王争
 
-
 ## Day 1: 数组和链表
 
 > [数组和链表](https://time.geekbang.org/column/article/80456)

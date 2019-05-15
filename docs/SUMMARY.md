@@ -50,3 +50,8 @@
 - [快速排序](sort/quick_sort.md)
 - [堆排序](sort/heap_sort.md)
 - [桶排序](sort/bucket_sort.md)
+
+## 其他
+
+- [LRU算法](other/lru.md)
+- [BloomFilter](other/bloomfilter.md)
