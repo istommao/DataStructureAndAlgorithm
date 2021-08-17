@@ -9,9 +9,21 @@ https://github.com/istommao/DataStructureAndAlgorithm
 
 ## 队列 (Queue)
 
+- 普通队列
+- 双端队列
+
 ## 堆栈 (Stack)
 
+- 顺序栈
+- 链式栈
+
 ## 链表 (Linked List)
+
+- 单链表
+- 双向链表
+- 循环链表
+- 双向循环链表
+
 
 ## 树 (Tree)
 
